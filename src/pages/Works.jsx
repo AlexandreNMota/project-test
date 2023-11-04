@@ -43,7 +43,7 @@ const Works = () => {
             </a>
           </li>
         </ul>
-        <div className="slider--prev" style={{ color: "#fff" }}>
+        <div className="slider--prev">
           <div
             style={{
               width: "15px", // Defina a largura da div conforme necessário
@@ -51,11 +51,10 @@ const Works = () => {
               backgroundImage: `url("${prev}")`, // Use a variável seta para a imagem de fundo
               backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
               backgroundRepeat: "no-repeat",
-              color: "#fff",
             }}
           ></div>
         </div>
-        <div className="slider--next" style={{ color: "#fff" }}>
+        <div className="slider--next">
           <div
             style={{
               width: "15px", // Defina a largura da div conforme necessário
