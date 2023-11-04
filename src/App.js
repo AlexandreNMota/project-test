@@ -5,6 +5,7 @@ import Header from "./components/globals/Header/Header";
 import Nav from "./components/globals/nav/Nav";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
+import About from "./pages/About";
 import "./css/main.sass";
 import "./css/main.css";
 function App() {
@@ -17,8 +18,11 @@ function App() {
           <li className="l-section section ">
             <Home />
           </li>
-          <li className="l-section section section--is-active">
+          <li className="l-section section ">
             <Works />
+          </li>
+          <li className="l-section section section--is-active">
+            <About />
           </li>
         </ul>
       </div>
