@@ -16,15 +16,20 @@ const Home = () => {
           <br />
           experience
         </h1>
-        <button className="cta">
+        <button
+          className="cta"
+          style={{ display: "flex", alignItems: "center" }}
+        >
           Hire Us
           <div
             style={{
-              width: "20px", // Defina a largura da div conforme necessário
-              height: "20px", // Defina a altura da div conforme necessário
+              width: "15px", // Defina a largura da div conforme necessário
+              height: "15px", // Defina a altura da div conforme necessário
               backgroundImage: `url("${seta}")`, // Use a variável seta para a imagem de fundo
               backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
-              backgroundRepeat: "no-repeat", // Evita a repetição da imagem
+              backgroundRepeat: "no-repeat",
+              marginLeft: "5px",
+              marginTop: "5px",
             }}
           ></div>
           <span className="btn-background"></span>
