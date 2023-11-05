@@ -16,6 +16,7 @@ function App() {
   const [perspectiveClassName, setPerspectiveClassName] = useState(
     "perspective effect-rotate-left"
   );
+
   const [curPos, setCurPos] = useState(0);
   const [nextPos, setNextPos] = useState(0);
   const lastItem = 4; // Atualize este valor de acordo com o número de seções
@@ -79,7 +80,7 @@ function App() {
             </div>
           </div>
         </div>
-        <OuterNav />
+        <OuterNav perspectiveClassName={perspectiveClassName} />
       </div>
     </>
   );
