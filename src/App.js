@@ -13,6 +13,9 @@ import "./css/main.sass";
 import "./css/main.css";
 
 function App() {
+  const [perspectiveClassName, setPerspectiveClassName] = useState(
+    "perspective effect-rotate-left"
+  );
   const [curPos, setCurPos] = useState(0);
   const [nextPos, setNextPos] = useState(0);
   const lastItem = 4; // Atualize este valor de acordo com o número de seções
@@ -46,12 +49,15 @@ function App() {
   return (
     <>
       <DeviceNotification />
-      <div className="perspective effect-rotate-left">
+      <div className={perspectiveClassName}>
         <div className="container">
           <div className="outer-nav--return"></div>
           <div id="viewport" className="l-viewport">
             <div className="l-wrapper">
-              <Header />
+              <Header
+                setPerspectiveClassName={setPerspectiveClassName}
+                perspectiveClassName={perspectiveClassName}
+              />
               <Nav setCurPos={setCurPos} setNextPos={setNextPos} />
               <ul className="l-main-content main-content">
                 <li className="l-section section section--is-active">
