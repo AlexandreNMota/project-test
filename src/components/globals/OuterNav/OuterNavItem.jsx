@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from "react";
+
 const OuterNavItem = ({
   title,
-  isInitiallyActive = false,
+  isInitiallyActive,
   perspectiveClassName,
+  setPerspectiveClassName,
+  itemAtivo,
 }) => {
   const [isActive, setIsActive] = useState(isInitiallyActive);
   const [classOuterNavItem, setClassItem] = useState("");
 
   useEffect(() => {
+    console.log("Item Ativo", title, itemAtivo, isInitiallyActive);
+  }, [itemAtivo]);
+  useEffect(() => {
     if (
       perspectiveClassName ===
       "perspective effect-rotate-left perspective--modalview effect-rotate-left--animate"
     ) {
-      if (isActive) {
+      if (isInitiallyActive) {
         setClassItem("is-active is-vis");
       } else {
         setClassItem("is-vis");
@@ -20,22 +26,13 @@ const OuterNavItem = ({
     } else {
       setClassItem("");
     }
-  }, [perspectiveClassName, isActive]);
-  // const classOuterNavItem =
-  //   perspectiveClassName !==
-  //   "perspective effect-rotate-left perspective--modalview effect-rotate-left--animate"
-  //     ? ""
-  //     : "is-vis";
+  }, [perspectiveClassName, isInitiallyActive]);
+
   const handleClick = () => {
-    if (!isActive) {
-      setIsActive(true);
-    } else {
-      setIsActive(false);
-    }
+    setPerspectiveClassName("perspective effect-rotate-left");
   };
 
   return (
-    // <li className={isActive ? "is-active" : ""} onClick={handleClick}>
     <li className={classOuterNavItem} onClick={handleClick}>
       {title}
     </li>
