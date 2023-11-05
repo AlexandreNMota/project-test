@@ -1,11 +1,12 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import Header from "./components/globals/Header/Header";
 import Nav from "./components/globals/nav/Nav";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import HireUs from "./pages/HireUs";
 import "./css/main.sass";
 import "./css/main.css";
 function App() {
@@ -21,8 +22,14 @@ function App() {
           <li className="l-section section ">
             <Works />
           </li>
-          <li className="l-section section section--is-active">
+          <li className="l-section section">
             <About />
+          </li>
+          <li className="l-section section">
+            <Contact />
+          </li>
+          <li className="l-section section section--is-active">
+            <HireUs />
           </li>
         </ul>
       </div>
