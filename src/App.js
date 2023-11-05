@@ -84,6 +84,7 @@ function App() {
           perspectiveClassName={perspectiveClassName}
           setPerspectiveClassName={setPerspectiveClassName}
           initialActiveItem={nextPos}
+          setNextPos={setNextPos}
         />
       </div>
     </>

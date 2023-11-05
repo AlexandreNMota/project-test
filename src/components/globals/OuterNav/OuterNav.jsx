@@ -4,6 +4,7 @@ const OuterNav = ({
   perspectiveClassName,
   setPerspectiveClassName,
   initialActiveItem,
+  setNextPos,
 }) => {
   const [itemAtivo, setItemAtivo] = useState(initialActiveItem);
   useEffect(() => {
@@ -25,6 +26,7 @@ const OuterNav = ({
         perspectiveClassName={perspectiveClassName}
         setPerspectiveClassName={setPerspectiveClassName}
         itemAtivo={itemAtivo}
+        setNextPos={setNextPos}
       />
       <OuterNavItem
         title="Works"
@@ -32,6 +34,7 @@ const OuterNav = ({
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 1}
         itemAtivo={itemAtivo}
+        setNextPos={setNextPos}
       />
       <OuterNavItem
         title="About"
@@ -39,6 +42,7 @@ const OuterNav = ({
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 2}
         itemAtivo={itemAtivo}
+        setNextPos={setNextPos}
       />
       <OuterNavItem
         title="Contact"
@@ -46,6 +50,7 @@ const OuterNav = ({
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 3}
         itemAtivo={itemAtivo}
+        setNextPos={setNextPos}
       />
       <OuterNavItem
         title="Hire us"
@@ -53,6 +58,7 @@ const OuterNav = ({
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 4}
         itemAtivo={itemAtivo}
+        setNextPos={setNextPos}
       />
     </ul>
   );

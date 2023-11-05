@@ -6,7 +6,12 @@ const Header = ({ perspectiveClassName, setPerspectiveClassName }) => {
         "perspective effect-rotate-left perspective--modalview effect-rotate-left--animate"
       );
     } else {
-      setPerspectiveClassName("perspective effect-rotate-left");
+      setPerspectiveClassName(
+        "perspective effect-rotate-left perspective--modalview"
+      );
+      setTimeout(() => {
+        setPerspectiveClassName("perspective effect-rotate-left");
+      }, 400);
     }
   };
   return (
