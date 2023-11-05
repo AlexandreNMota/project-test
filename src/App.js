@@ -80,7 +80,11 @@ function App() {
             </div>
           </div>
         </div>
-        <OuterNav perspectiveClassName={perspectiveClassName} />
+        <OuterNav
+          perspectiveClassName={perspectiveClassName}
+          setPerspectiveClassName={setPerspectiveClassName}
+          initialActiveItem={nextPos}
+        />
       </div>
     </>
   );
