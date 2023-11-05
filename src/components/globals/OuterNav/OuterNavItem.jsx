@@ -20,7 +20,7 @@ const OuterNavItem = ({
     } else {
       setClassItem("");
     }
-  }, [perspectiveClassName]);
+  }, [perspectiveClassName, isActive]);
   // const classOuterNavItem =
   //   perspectiveClassName !==
   //   "perspective effect-rotate-left perspective--modalview effect-rotate-left--animate"
@@ -29,6 +29,8 @@ const OuterNavItem = ({
   const handleClick = () => {
     if (!isActive) {
       setIsActive(true);
+    } else {
+      setIsActive(false);
     }
   };
 
