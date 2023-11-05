@@ -12,14 +12,10 @@ import OuterNav from "./components/globals/OuterNav/OuterNav";
 import "./css/main.sass";
 import "./css/main.css";
 
-import useContentUpdate from "./hooks/useContentUpdate";
-
 function App() {
   const [curPos, setCurPos] = useState(0);
   const [nextPos, setNextPos] = useState(0);
   const lastItem = 4; // Atualize este valor de acordo com o número de seções
-
-  // useContentUpdate(curPos, nextPos, lastItem);
 
   useEffect(() => {
     const mainContent = document.querySelector(".main-content");
