@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
-const Nav = () => {
+const Nav = ({ setCurPos, setNextPos }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setCurPos(activeIndex);
+    setNextPos(activeIndex);
+  }, [activeIndex]);
 
   const handleItemClick = (index) => {
     if (index !== activeIndex) {
