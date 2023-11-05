@@ -1,5 +1,5 @@
 // src/App.js
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/globals/Header/Header";
 import Nav from "./components/globals/nav/Nav";
 import Home from "./pages/Home";
@@ -8,10 +8,19 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import HireUs from "./pages/HireUs";
 import DeviceNotification from "./components/globals/DeviceNotification/DeviceNotification";
+import OuterNav from "./components/globals/OuterNav/OuterNav";
 import "./css/main.sass";
 import "./css/main.css";
 
+import useContentUpdate from "./hooks/useContentUpdate";
+
 function App() {
+  const [curPos, setCurPos] = useState(0);
+  const [nextPos, setNextPos] = useState(0);
+  const lastItem = 4; // Atualize este valor de acordo com o número de seções
+
+  useContentUpdate(curPos, nextPos, lastItem);
+
   return (
     <>
       <DeviceNotification />
@@ -42,13 +51,7 @@ function App() {
             </div>
           </div>
         </div>
-        <ul className="outer-nav">
-          <li className="is-active">Home</li>
-          <li>Works</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Hire us</li>
-        </ul>
+        <OuterNav />
       </div>
     </>
   );
