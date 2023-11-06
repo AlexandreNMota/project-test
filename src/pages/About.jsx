@@ -1,8 +1,8 @@
 import seta from "../components/icons/seta.svg";
 import visual from "../img/about-visual.png";
-const About = () => {
+const About = ({ isDisabled }) => {
   return (
-    <div className="about">
+    <div className={`about ${isDisabled ? "disable-hover" : ""}`}>
       <div className="about--banner">
         <h2>
           We

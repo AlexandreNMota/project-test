@@ -84,7 +84,7 @@ function App() {
                   <Works isDisabled={isDisabled} />
                 </li>
                 <li className="l-section section">
-                  <About />
+                  <About isDisabled={isDisabled} />
                 </li>
                 <li className="l-section section">
                   <Contact isDisabled={isDisabled} />
