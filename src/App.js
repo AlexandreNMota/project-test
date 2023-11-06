@@ -67,7 +67,7 @@ function App() {
               />
               <ul className="l-main-content main-content">
                 <li className="l-section section section--is-active">
-                  <Home />
+                  <Home setNextPos={setNextPos} />
                 </li>
                 <li className="l-section section ">
                   <Works />

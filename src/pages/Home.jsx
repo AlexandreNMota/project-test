@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import seta from "../components/icons/seta.svg";
 import imagem from "../img/introduction-visual.png";
-const Home = () => {
-  useEffect(() => {
-    console.log("Home");
-  }, []);
-
+const Home = ({ setNextPos }) => {
+  const hireUs = () => {
+    setNextPos(4);
+  };
   return (
     <div className="intro">
       <div className="intro--banner">
@@ -19,6 +18,7 @@ const Home = () => {
         <button
           className="cta"
           style={{ display: "flex", alignItems: "center" }}
+          onClick={hireUs}
         >
           Hire Us
           <div
