@@ -7,13 +7,12 @@ const OuterNavItem = ({
   setPerspectiveClassName,
   itemAtivo,
   setNextPos,
+  nextPos,
+  item,
 }) => {
   const [isActive, setIsActive] = useState(isInitiallyActive);
   const [classOuterNavItem, setClassItem] = useState("");
 
-  useEffect(() => {
-    console.log("Item Ativo", title, itemAtivo, isInitiallyActive);
-  }, [itemAtivo]);
   useEffect(() => {
     if (
       perspectiveClassName ===
@@ -30,7 +29,8 @@ const OuterNavItem = ({
   }, [perspectiveClassName, isInitiallyActive]);
 
   const handleClick = () => {
-    setNextPos(itemAtivo);
+    setNextPos(item);
+    console.log("nextPos após setNextPos:", nextPos);
     setPerspectiveClassName(
       "perspective effect-rotate-left perspective--modalview"
     );
