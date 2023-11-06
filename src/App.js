@@ -64,6 +64,7 @@ function App() {
                 setCurPos={setCurPos}
                 setNextPos={setNextPos}
                 nextPos={nextPos}
+                perspectiveClassName={perspectiveClassName}
               />
               <ul className="l-main-content main-content">
                 <li className="l-section section section--is-active">

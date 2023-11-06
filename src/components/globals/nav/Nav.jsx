@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
-const Nav = ({ setCurPos, setNextPos, nextPos }) => {
+const Nav = ({ setCurPos, setNextPos, nextPos, perspectiveClassName }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const maxIndex = 4; // Update this with the total number of sections
   const minIndex = 0;
@@ -16,35 +16,37 @@ const Nav = ({ setCurPos, setNextPos, nextPos }) => {
   }, [nextPos]);
 
   useEffect(() => {
-    // Function to handle scroll events
-    const handleScroll = (event) => {
-      const deltaY = event.deltaY;
+    if (perspectiveClassName === "perspective effect-rotate-left") {
+      // Function to handle scroll events
+      const handleScroll = (event) => {
+        const deltaY = event.deltaY;
 
-      if (deltaY > 0) {
-        // Scrolled down
-        if (activeIndex === maxIndex) {
-          setActiveIndex(minIndex); // Loop to the first item
-        } else {
-          setActiveIndex(activeIndex + 1);
+        if (deltaY > 0) {
+          // Scrolled down
+          if (activeIndex === maxIndex) {
+            setActiveIndex(minIndex); // Loop to the first item
+          } else {
+            setActiveIndex(activeIndex + 1);
+          }
+        } else if (deltaY < 0) {
+          // Scrolled up
+          if (activeIndex === minIndex) {
+            return; // Do nothing if on the first item
+          } else {
+            setActiveIndex(activeIndex - 1);
+          }
         }
-      } else if (deltaY < 0) {
-        // Scrolled up
-        if (activeIndex === minIndex) {
-          return; // Do nothing if on the first item
-        } else {
-          setActiveIndex(activeIndex - 1);
-        }
-      }
-    };
+      };
 
-    // Add wheel event listener for scrolling
-    window.addEventListener("wheel", handleScroll);
+      // Add wheel event listener for scrolling
+      window.addEventListener("wheel", handleScroll);
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, [activeIndex, maxIndex, minIndex]);
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener("wheel", handleScroll);
+      };
+    }
+  }, [activeIndex, maxIndex, minIndex, perspectiveClassName]);
 
   const handleItemClick = (index) => {
     if (index !== activeIndex) {
