@@ -1,12 +1,17 @@
 import check from "../components/icons/check.svg";
-const HireUs = () => {
+const HireUs = ({ isDisabled }) => {
   return (
     <div className="hire">
       <h2>You want us to do</h2>
       <form className="work-request">
         <div className="work-request--options">
           <span className="options-a">
-            <input id="opt-1" type="checkbox" value="app design" />
+            <input
+              id="opt-1"
+              type="checkbox"
+              value="app design"
+              disabled={isDisabled}
+            />
             <label
               for="opt-1"
               style={{
@@ -26,7 +31,12 @@ const HireUs = () => {
               ></div>
               App Design
             </label>
-            <input id="opt-2" type="checkbox" value="graphic design" />
+            <input
+              id="opt-2"
+              type="checkbox"
+              value="graphic design"
+              disabled={isDisabled}
+            />
             <label
               for="opt-2"
               style={{
@@ -46,7 +56,12 @@ const HireUs = () => {
               ></div>
               Graphic Design
             </label>
-            <input id="opt-3" type="checkbox" value="motion design" />
+            <input
+              id="opt-3"
+              type="checkbox"
+              value="motion design"
+              disabled={isDisabled}
+            />
             <label
               for="opt-3"
               style={{
@@ -68,7 +83,12 @@ const HireUs = () => {
             </label>
           </span>
           <span className="options-b">
-            <input id="opt-4" type="checkbox" value="ux design" />
+            <input
+              id="opt-4"
+              type="checkbox"
+              value="ux design"
+              disabled={isDisabled}
+            />
             <label
               for="opt-4"
               style={{
@@ -88,7 +108,12 @@ const HireUs = () => {
               ></div>
               UX Design
             </label>
-            <input id="opt-5" type="checkbox" value="webdesign" />
+            <input
+              id="opt-5"
+              type="checkbox"
+              value="webdesign"
+              disabled={isDisabled}
+            />
             <label
               for="opt-5"
               style={{
@@ -108,7 +133,12 @@ const HireUs = () => {
               ></div>
               Webdesign
             </label>
-            <input id="opt-6" type="checkbox" value="marketing" />
+            <input
+              id="opt-6"
+              type="checkbox"
+              value="marketing"
+              disabled={isDisabled}
+            />
             <label
               for="opt-6"
               style={{
@@ -132,15 +162,25 @@ const HireUs = () => {
         </div>
         <div className="work-request--information">
           <div className="information-name">
-            <input id="name" type="text" spellcheck="false" />
+            <input
+              id="name"
+              type="text"
+              spellcheck="false"
+              disabled={isDisabled}
+            />
             <label for="name">Name</label>
           </div>
           <div className="information-email">
-            <input id="email" type="email" spellcheck="false" />
+            <input
+              id="email"
+              type="email"
+              spellcheck="false"
+              disabled={isDisabled}
+            />
             <label for="email">Email</label>
           </div>
         </div>
-        <input type="submit" value="Send Request" />
+        <input type="submit" value="Send Request" disabled={isDisabled} />
       </form>
     </div>
   );

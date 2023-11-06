@@ -1,6 +1,8 @@
-const NavItem = ({ title, index, isActive, onItemClick }) => {
+const NavItem = ({ title, index, isActive, onItemClick, isDisabled }) => {
   const handleClick = () => {
-    onItemClick(index);
+    if (!isDisabled) {
+      onItemClick(index);
+    }
   };
 
   return (

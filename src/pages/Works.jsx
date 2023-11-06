@@ -106,7 +106,7 @@ import nowak from "../img/work-alex-nowak.jpg";
 import metiew from "../img/work-metiew-smith.jpg";
 import prev from "../components/icons/prev.svg";
 import next from "../components/icons/next.svg";
-const Works = () => {
+const Works = ({ isDisabled }) => {
   const works = [
     {
       image: victory,
@@ -184,7 +184,12 @@ const Works = () => {
             </li>
           ))}
         </ul>
-        <div className="slider--prev" onClick={() => handleSliderClick(false)}>
+        <button
+          className="slider--prev"
+          onClick={() => handleSliderClick(false)}
+          disabled={isDisabled}
+          style={{ boxShadow: "none", border: "none" }}
+        >
           <div
             style={{
               width: "15px", // Defina a largura da div conforme necessário
@@ -194,8 +199,13 @@ const Works = () => {
               backgroundRepeat: "no-repeat",
             }}
           ></div>
-        </div>
-        <div className="slider--next" onClick={() => handleSliderClick(true)}>
+        </button>
+        <button
+          className="slider--next"
+          onClick={() => handleSliderClick(true)}
+          disabled={isDisabled}
+          style={{ boxShadow: "none", border: "none" }}
+        >
           <div
             style={{
               width: "15px", // Defina a largura da div conforme necessário
@@ -205,7 +215,7 @@ const Works = () => {
               backgroundRepeat: "no-repeat",
             }}
           ></div>
-        </div>
+        </button>
       </div>
     </div>
   );

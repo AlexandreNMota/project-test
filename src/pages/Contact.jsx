@@ -1,4 +1,9 @@
-const Contact = () => {
+import { useEffect } from "react";
+
+const Contact = ({ isDisabled }) => {
+  useEffect(() => {
+    console.log(isDisabled);
+  }, [isDisabled]);
   return (
     <div className="contact">
       <div className="contact--lockup">
@@ -10,13 +15,17 @@ const Contact = () => {
           </div>
           <ul className="modal--options">
             <li>
-              <a href="#0">Bēhance</a>
+              {isDisabled ? <span>Bēhance</span> : <a href="#0">Bēhance</a>}
             </li>
             <li>
-              <a href="#0">dribbble</a>
+              {isDisabled ? <span>dribbble</span> : <a href="#0">dribbble</a>}
             </li>
             <li>
-              <a href="mailto:ouremail@gmail.com">Contact Us</a>
+              {isDisabled ? (
+                <span>Contact Us</span>
+              ) : (
+                <a href="mailto:ouremail@gmail.com">Contact Us</a>
+              )}
             </li>
           </ul>
         </div>

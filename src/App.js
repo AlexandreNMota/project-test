@@ -16,11 +16,19 @@ function App() {
   const [perspectiveClassName, setPerspectiveClassName] = useState(
     "perspective effect-rotate-left"
   );
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const [curPos, setCurPos] = useState(0);
   const [nextPos, setNextPos] = useState(0);
   const lastItem = 4; // Atualize este valor de acordo com o número de seções
 
+  useEffect(() => {
+    if (perspectiveClassName !== "perspective effect-rotate-left") {
+      setIsDisabled(true);
+    } else {
+      setIsDisabled(false);
+    }
+  }, [perspectiveClassName]);
   useEffect(() => {
     const mainContent = document.querySelector(".main-content");
     const sections = mainContent.querySelectorAll(".section");
@@ -59,28 +67,30 @@ function App() {
                 setPerspectiveClassName={setPerspectiveClassName}
                 perspectiveClassName={perspectiveClassName}
                 setNextPos={setNextPos}
+                isDisabled={isDisabled}
               />
               <Nav
                 setCurPos={setCurPos}
                 setNextPos={setNextPos}
                 nextPos={nextPos}
                 perspectiveClassName={perspectiveClassName}
+                isDisabled={isDisabled}
               />
               <ul className="l-main-content main-content">
                 <li className="l-section section section--is-active">
-                  <Home setNextPos={setNextPos} />
+                  <Home setNextPos={setNextPos} isDisabled={isDisabled} />
                 </li>
                 <li className="l-section section ">
-                  <Works />
+                  <Works isDisabled={isDisabled} />
                 </li>
                 <li className="l-section section">
                   <About />
                 </li>
                 <li className="l-section section">
-                  <Contact />
+                  <Contact isDisabled={isDisabled} />
                 </li>
                 <li className="l-section section">
-                  <HireUs />
+                  <HireUs isDisabled={isDisabled} />
                 </li>
               </ul>
             </div>

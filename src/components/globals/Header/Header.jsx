@@ -3,6 +3,7 @@ const Header = ({
   perspectiveClassName,
   setPerspectiveClassName,
   setNextPos,
+  isDisabled,
 }) => {
   const changePerspective = () => {
     if (perspectiveClassName === "perspective effect-rotate-left") {
@@ -29,12 +30,25 @@ const Header = ({
 
         <p>Global</p>
       </a>
-      <button className="header--cta cta" onClick={hireUs}>
+      <button
+        className="header--cta cta"
+        onClick={hireUs}
+        disabled={isDisabled}
+      >
         Hire Us
       </button>
-      <div className="header--nav-toggle" onClick={changePerspective}>
+      <button
+        className="header--nav-toggle"
+        onClick={changePerspective}
+        disabled={isDisabled}
+        style={{
+          boxShadow: "none",
+          border: "none",
+          backgroundColor: "transparent",
+        }}
+      >
         <span></span>
-      </div>
+      </button>
     </header>
   );
 };

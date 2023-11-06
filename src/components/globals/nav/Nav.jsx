@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
-const Nav = ({ setCurPos, setNextPos, nextPos, perspectiveClassName }) => {
+const Nav = ({
+  setCurPos,
+  setNextPos,
+  nextPos,
+  perspectiveClassName,
+  isDisabled,
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const maxIndex = 4; // Update this with the total number of sections
   const minIndex = 0;
@@ -62,30 +68,35 @@ const Nav = ({ setCurPos, setNextPos, nextPos, perspectiveClassName }) => {
           index={0}
           isActive={activeIndex === 0}
           onItemClick={handleItemClick}
+          isDisabled={isDisabled}
         />
         <NavItem
           title="Works"
           index={1}
           isActive={activeIndex === 1}
           onItemClick={handleItemClick}
+          isDisabled={isDisabled}
         />
         <NavItem
           title="About"
           index={2}
           isActive={activeIndex === 2}
           onItemClick={handleItemClick}
+          isDisabled={isDisabled}
         />
         <NavItem
           title="Contact"
           index={3}
           isActive={activeIndex === 3}
           onItemClick={handleItemClick}
+          isDisabled={isDisabled}
         />
         <NavItem
           title="Hire Us"
           index={4}
           isActive={activeIndex === 4}
           onItemClick={handleItemClick}
+          isDisabled={isDisabled}
         />
       </ul>
     </nav>

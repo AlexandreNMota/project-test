@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import seta from "../components/icons/seta.svg";
 import imagem from "../img/introduction-visual.png";
-const Home = ({ setNextPos }) => {
+const Home = ({ setNextPos, isDisabled }) => {
   const hireUs = () => {
     setNextPos(4);
   };
@@ -19,6 +19,7 @@ const Home = ({ setNextPos }) => {
           className="cta"
           style={{ display: "flex", alignItems: "center" }}
           onClick={hireUs}
+          disabled={isDisabled}
         >
           Hire Us
           <div
