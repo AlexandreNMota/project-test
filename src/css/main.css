@@ -1169,6 +1169,13 @@ body {
     display: none;
   }
 }
+input[type="checkbox"] + label div {
+  display: none; /* Oculta as divs por padrão */
+}
+
+input[type="checkbox"]:checked + label div {
+  display: block; /* Mostra as divs quando o checkbox está marcado */
+}
 .contact {
   position: fixed;
   top: 0;

@@ -7,11 +7,18 @@ const HireUs = () => {
         <div className="work-request--options">
           <span className="options-a">
             <input id="opt-1" type="checkbox" value="app design" />
-            <label for="opt-1">
+            <label
+              for="opt-1"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <div
                 style={{
-                  width: "15px", // Defina a largura da div conforme necessário
-                  height: "15px", // Defina a altura da div conforme necessário
+                  width: "20px", // Defina a largura da div conforme necessário
+                  height: "20px", // Defina a altura da div conforme necessário
                   backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
                   backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
                   backgroundRepeat: "no-repeat",
@@ -20,11 +27,18 @@ const HireUs = () => {
               App Design
             </label>
             <input id="opt-2" type="checkbox" value="graphic design" />
-            <label for="opt-2">
+            <label
+              for="opt-2"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <div
                 style={{
-                  width: "15px", // Defina a largura da div conforme necessário
-                  height: "15px", // Defina a altura da div conforme necessário
+                  width: "20px", // Defina a largura da div conforme necessário
+                  height: "20px", // Defina a altura da div conforme necessário
                   backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
                   backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
                   backgroundRepeat: "no-repeat",
@@ -33,11 +47,18 @@ const HireUs = () => {
               Graphic Design
             </label>
             <input id="opt-3" type="checkbox" value="motion design" />
-            <label for="opt-3">
+            <label
+              for="opt-3"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <div
                 style={{
-                  width: "15px", // Defina a largura da div conforme necessário
-                  height: "15px", // Defina a altura da div conforme necessário
+                  width: "20px", // Defina a largura da div conforme necessário
+                  height: "20px", // Defina a altura da div conforme necessário
                   backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
                   backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
                   backgroundRepeat: "no-repeat",
@@ -48,11 +69,18 @@ const HireUs = () => {
           </span>
           <span className="options-b">
             <input id="opt-4" type="checkbox" value="ux design" />
-            <label for="opt-4">
+            <label
+              for="opt-4"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <div
                 style={{
-                  width: "15px", // Defina a largura da div conforme necessário
-                  height: "15px", // Defina a altura da div conforme necessário
+                  width: "20px", // Defina a largura da div conforme necessário
+                  height: "20px", // Defina a altura da div conforme necessário
                   backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
                   backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
                   backgroundRepeat: "no-repeat",
@@ -61,11 +89,18 @@ const HireUs = () => {
               UX Design
             </label>
             <input id="opt-5" type="checkbox" value="webdesign" />
-            <label for="opt-5">
+            <label
+              for="opt-5"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <div
                 style={{
-                  width: "15px", // Defina a largura da div conforme necessário
-                  height: "15px", // Defina a altura da div conforme necessário
+                  width: "20px", // Defina a largura da div conforme necessário
+                  height: "20px", // Defina a altura da div conforme necessário
                   backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
                   backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
                   backgroundRepeat: "no-repeat",
@@ -74,11 +109,18 @@ const HireUs = () => {
               Webdesign
             </label>
             <input id="opt-6" type="checkbox" value="marketing" />
-            <label for="opt-6">
+            <label
+              for="opt-6"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
               <div
                 style={{
-                  width: "15px", // Defina a largura da div conforme necessário
-                  height: "15px", // Defina a altura da div conforme necessário
+                  width: "20px", // Defina a largura da div conforme necessário
+                  height: "20px", // Defina a altura da div conforme necessário
                   backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
                   backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
                   backgroundRepeat: "no-repeat",
