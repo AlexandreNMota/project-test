@@ -1,5 +1,9 @@
 import logo from "../../../img/logo.png";
-const Header = ({ perspectiveClassName, setPerspectiveClassName }) => {
+const Header = ({
+  perspectiveClassName,
+  setPerspectiveClassName,
+  setNextPos,
+}) => {
   const changePerspective = () => {
     if (perspectiveClassName === "perspective effect-rotate-left") {
       setPerspectiveClassName(
@@ -14,6 +18,10 @@ const Header = ({ perspectiveClassName, setPerspectiveClassName }) => {
       }, 400);
     }
   };
+
+  const hireUs = () => {
+    setNextPos(4);
+  };
   return (
     <header className="header">
       <a className="header--logo" href="#0">
@@ -21,7 +29,9 @@ const Header = ({ perspectiveClassName, setPerspectiveClassName }) => {
 
         <p>Global</p>
       </a>
-      <button className="header--cta cta">Hire Us</button>
+      <button className="header--cta cta" onClick={hireUs}>
+        Hire Us
+      </button>
       <div className="header--nav-toggle" onClick={changePerspective}>
         <span></span>
       </div>

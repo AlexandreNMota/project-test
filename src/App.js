@@ -58,8 +58,13 @@ function App() {
               <Header
                 setPerspectiveClassName={setPerspectiveClassName}
                 perspectiveClassName={perspectiveClassName}
+                setNextPos={setNextPos}
               />
-              <Nav setCurPos={setCurPos} setNextPos={setNextPos} />
+              <Nav
+                setCurPos={setCurPos}
+                setNextPos={setNextPos}
+                nextPos={nextPos}
+              />
               <ul className="l-main-content main-content">
                 <li className="l-section section section--is-active">
                   <Home />

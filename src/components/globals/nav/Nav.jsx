@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
-const Nav = ({ setCurPos, setNextPos }) => {
+const Nav = ({ setCurPos, setNextPos, nextPos }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const maxIndex = 4; // Update this with the total number of sections
   const minIndex = 0;
@@ -8,6 +8,12 @@ const Nav = ({ setCurPos, setNextPos }) => {
     setCurPos(activeIndex);
     setNextPos(activeIndex);
   }, [activeIndex]);
+  useEffect(() => {
+    // Atualiza o activeIndex quando nextPos muda
+    if (nextPos !== activeIndex) {
+      setActiveIndex(nextPos);
+    }
+  }, [nextPos]);
 
   useEffect(() => {
     // Function to handle scroll events
