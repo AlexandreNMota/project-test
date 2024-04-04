@@ -9,11 +9,11 @@ const Home = ({ setNextPos, isDisabled }) => {
     <div className="intro">
       <div className="intro--banner">
         <h1>
-          Your next
+          Inovação
           <br />
-          interactive
+          com 
           <br />
-          experience
+          tecnologia
         </h1>
         <button
           className="cta"
@@ -21,7 +21,7 @@ const Home = ({ setNextPos, isDisabled }) => {
           onClick={hireUs}
           disabled={isDisabled}
         >
-          Hire Us
+          Explore Agora
           <div
             style={{
               width: "15px", // Defina a largura da div conforme necessário

@@ -23,12 +23,15 @@ const Header = ({
   const hireUs = () => {
     setNextPos(4);
   };
+
+  const goHome = (e) =>{
+    e.preventDefault();
+    setNextPos(0);
+  }
   return (
     <header className="header">
-      <a className="header--logo" href="#0">
-        <img src={logo} alt="Global" />
-
-        <p>Global</p>
+      <a className="header--logo" href="#0" onClick={(e)=>{goHome(e)}}>
+        <img src={logo} alt="Global" />        
       </a>
       <button
         className="header--cta cta"

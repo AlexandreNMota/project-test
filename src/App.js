@@ -62,13 +62,13 @@ function App() {
         <div className="container">
           <div className="outer-nav--return"></div>
           <div id="viewport" className="l-viewport">
+            <Header
+              setPerspectiveClassName={setPerspectiveClassName}
+              perspectiveClassName={perspectiveClassName}
+              setNextPos={setNextPos}
+              isDisabled={isDisabled}
+            />
             <div className="l-wrapper">
-              <Header
-                setPerspectiveClassName={setPerspectiveClassName}
-                perspectiveClassName={perspectiveClassName}
-                setNextPos={setNextPos}
-                isDisabled={isDisabled}
-              />
               <Nav
                 setCurPos={setCurPos}
                 setNextPos={setNextPos}
