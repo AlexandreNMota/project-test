@@ -64,35 +64,35 @@ const Nav = ({
     <nav className="l-side-nav">
       <ul className="side-nav">
         <NavItem
-          title="Home"
+          title="Início"
           index={0}
           isActive={activeIndex === 0}
           onItemClick={handleItemClick}
           isDisabled={isDisabled}
         />
         <NavItem
-          title="Works"
+          title="Serviços"
           index={1}
           isActive={activeIndex === 1}
           onItemClick={handleItemClick}
           isDisabled={isDisabled}
         />
         <NavItem
-          title="About"
+          title="Sobre nós"
           index={2}
           isActive={activeIndex === 2}
           onItemClick={handleItemClick}
           isDisabled={isDisabled}
         />
         <NavItem
-          title="Contact"
+          title="Contato"
           index={3}
           isActive={activeIndex === 3}
           onItemClick={handleItemClick}
           isDisabled={isDisabled}
         />
         <NavItem
-          title="Hire Us"
+          title="Orçamento"
           index={4}
           isActive={activeIndex === 4}
           onItemClick={handleItemClick}

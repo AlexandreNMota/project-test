@@ -11,7 +11,7 @@ const Home = ({ setNextPos, isDisabled }) => {
         <h1>
           Inovação
           <br />
-          com 
+          com
           <br />
           tecnologia
         </h1>
@@ -21,7 +21,7 @@ const Home = ({ setNextPos, isDisabled }) => {
           onClick={hireUs}
           disabled={isDisabled}
         >
-          Explore Agora
+          Solicite um orçamento
           <div
             style={{
               width: "15px", // Defina a largura da div conforme necessário
@@ -39,21 +39,24 @@ const Home = ({ setNextPos, isDisabled }) => {
       </div>
       <div className="intro--options">
         <a href="#0">
-          <h3>Metiew &amp; Smith</h3>
+          <h3>Inovação tecnológica</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+            Na CodeCase, transformamos paixão por tecnologia em soluções
+            inovadoras que impulsionam seu sucesso.
           </p>
         </a>
         <a href="#0">
-          <h3>Fantasy interactive</h3>
+          <h3>Qualidade na entrega</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+            Nosso compromisso com a excelência garante que cada entrega seja
+            impecável, excedendo suas expectativas.
           </p>
         </a>
         <a href="#0">
-          <h3>Paul &amp; shark</h3>
+          <h3>Segurança para o cliente</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+            Priorizamos a segurança de nossos clientes em cada etapa, garantindo
+            tranquilidade e confiança em nossos serviços.
           </p>
         </a>
       </div>
