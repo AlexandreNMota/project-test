@@ -22,7 +22,7 @@ const OuterNav = ({
   return (
     <ul className={classOuterNav}>
       <OuterNavItem
-        title="Home"
+        title="Início"
         isInitiallyActive={itemAtivo === 0}
         perspectiveClassName={perspectiveClassName}
         setPerspectiveClassName={setPerspectiveClassName}
@@ -32,7 +32,7 @@ const OuterNav = ({
         item={0}
       />
       <OuterNavItem
-        title="Works"
+        title="Serviços"
         perspectiveClassName={perspectiveClassName}
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 1}
@@ -42,7 +42,7 @@ const OuterNav = ({
         item={1}
       />
       <OuterNavItem
-        title="About"
+        title="Sobre nós"
         perspectiveClassName={perspectiveClassName}
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 2}
@@ -52,7 +52,7 @@ const OuterNav = ({
         item={2}
       />
       <OuterNavItem
-        title="Contact"
+        title="Contato"
         perspectiveClassName={perspectiveClassName}
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 3}
@@ -62,7 +62,7 @@ const OuterNav = ({
         item={3}
       />
       <OuterNavItem
-        title="Hire us"
+        title="Orçamento"
         perspectiveClassName={perspectiveClassName}
         setPerspectiveClassName={setPerspectiveClassName}
         isInitiallyActive={itemAtivo === 4}
