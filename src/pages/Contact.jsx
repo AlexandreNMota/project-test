@@ -9,22 +9,19 @@ const Contact = ({ isDisabled }) => {
       <div className="contact--lockup">
         <div className="modal">
           <div className="modal--information">
-            <p>Pawia 5, 31-154 Kraków, Poland</p>
-            <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-            <a href="tel:+148126287560">+48 12 628 75 60</a>
+            <p>R. Francisco Rocha, 198 - Curitiba, Brasil</p>
+            <a href="mailto:codecasebr@gmail.com">codecasebr@gmail.com</a>
+            <a href="tel:+5541984832429">+55 41 98483-2429</a>
           </div>
           <ul className="modal--options">
             <li>
-              {isDisabled ? <span>Bēhance</span> : <a href="#0">Bēhance</a>}
-            </li>
-            <li>
-              {isDisabled ? <span>dribbble</span> : <a href="#0">dribbble</a>}
+              {isDisabled ? <span>Instagram</span> : <a href="#0">Instagram</a>}
             </li>
             <li>
               {isDisabled ? (
-                <span>Contact Us</span>
+                <span>Entre em contato</span>
               ) : (
-                <a href="mailto:ouremail@gmail.com">Contact Us</a>
+                <a href="mailto:codecasebr@gmail.com">Entre em contato</a>
               )}
             </li>
           </ul>
