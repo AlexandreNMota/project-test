@@ -9,7 +9,7 @@ const HireUs = ({ isDisabled }) => {
             <input
               id="opt-1"
               type="checkbox"
-              value="app design"
+              value="Landingpage"
               disabled={isDisabled}
             />
             <label
@@ -29,12 +29,12 @@ const HireUs = ({ isDisabled }) => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              App Design
+              Landingpage
             </label>
             <input
               id="opt-2"
               type="checkbox"
-              value="graphic design"
+              value="Software"
               disabled={isDisabled}
             />
             <label
@@ -54,12 +54,12 @@ const HireUs = ({ isDisabled }) => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              Graphic Design
+              Software
             </label>
             <input
               id="opt-3"
               type="checkbox"
-              value="motion design"
+              value="Aplicativo"
               disabled={isDisabled}
             />
             <label
@@ -79,14 +79,14 @@ const HireUs = ({ isDisabled }) => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              Motion Design
+              Aplicativo
             </label>
           </span>
           <span className="options-b">
             <input
               id="opt-4"
               type="checkbox"
-              value="ux design"
+              value="Treinamento"
               disabled={isDisabled}
             />
             <label
@@ -106,12 +106,12 @@ const HireUs = ({ isDisabled }) => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              UX Design
+              Treinamento
             </label>
             <input
               id="opt-5"
               type="checkbox"
-              value="webdesign"
+              value="Consultoria"
               disabled={isDisabled}
             />
             <label
@@ -131,32 +131,7 @@ const HireUs = ({ isDisabled }) => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              Webdesign
-            </label>
-            <input
-              id="opt-6"
-              type="checkbox"
-              value="marketing"
-              disabled={isDisabled}
-            />
-            <label
-              for="opt-6"
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                alignItems: "center",
-              }}
-            >
-              <div
-                style={{
-                  width: "20px", // Defina a largura da div conforme necessário
-                  height: "20px", // Defina a altura da div conforme necessário
-                  backgroundImage: `url("${check}")`, // Use a variável seta para a imagem de fundo
-                  backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></div>
-              Marketing
+              Consultoria
             </label>
           </span>
         </div>
