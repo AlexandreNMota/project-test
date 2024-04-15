@@ -1,130 +1,28 @@
-// import React, { useState, useRef, useEffect } from "react";
-// import victory from "../img/work-victory.jpg";
-// import nowak from "../img/work-alex-nowak.jpg";
-// import metiew from "../img/work-metiew-smith.jpg";
-// import prev from "../components/icons/prev.svg";
-// import next from "../components/icons/next.svg";
-// const Works = () => {
-//   const totalWorks = 3; // O número total de itens no slider
-//   const [curLeft, setCurLeft] = useState(0);
-//   const [curCenter, setCurCenter] = useState(1);
-//   const [curRight, setCurRight] = useState(2);
-
-//   const sliderRef = useRef(null);
-
-//   const handleSliderClick = (isNext) => {
-//     if (isNext) {
-//       setCurLeft((curLeft + 1) % totalWorks);
-//       setCurCenter((curCenter + 1) % totalWorks);
-//       setCurRight((curRight + 1) % totalWorks);
-//     } else {
-//       setCurLeft((curLeft - 1 + totalWorks) % totalWorks);
-//       setCurCenter((curCenter - 1 + totalWorks) % totalWorks);
-//       setCurRight((curRight - 1 + totalWorks) % totalWorks);
-//     }
-//   };
-
-//   useEffect(() => {
-//     const slider = sliderRef.current;
-//     console.log(slider);
-//     if (slider) {
-//       slider.style.opacity = 0;
-//       setTimeout(() => {
-//         slider.style.opacity = 1;
-//       }, 400);
-//     }
-//   }, [curLeft, curCenter, curRight]);
-//   return (
-//     <div className="work">
-//       <h2>Selected work</h2>
-//       <div className="work--lockup">
-//         <ul className="slider" ref={sliderRef}>
-//           <li className="slider--item slider--item-left">
-//             <a href="#0">
-//               <div className="slider--item-image">
-//                 <img src={victory} alt="Welcome" />
-//               </div>
-//               <p className="slider--item-title">Victory</p>
-//               <p className="slider--item-description">
-//                 Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
-//               </p>
-//             </a>
-//           </li>
-//           <li className="slider--item slider--item-center">
-//             <a href="#0">
-//               <div className="slider--item-image">
-//                 <img src={nowak} alt="Welcome" />
-//               </div>
-//               <p className="slider--item-title">Metiew &amp; Smith</p>
-//               <p className="slider--item-description">
-//                 Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
-//               </p>
-//             </a>
-//           </li>
-//           <li className="slider--item slider--item-right">
-//             <a href="#0">
-//               <div className="slider--item-image">
-//                 <img src={metiew} alt="Welcome" />
-//               </div>
-//               <p className="slider--item-title">Alex Nowak</p>
-//               <p className="slider--item-description">
-//                 Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
-//               </p>
-//             </a>
-//           </li>
-//         </ul>
-//         <div className="slider--prev" onClick={() => handleSliderClick(false)}>
-//           <div
-//             style={{
-//               width: "15px", // Defina a largura da div conforme necessário
-//               height: "15px", // Defina a altura da div conforme necessário
-//               backgroundImage: `url("${prev}")`, // Use a variável seta para a imagem de fundo
-//               backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
-//               backgroundRepeat: "no-repeat",
-//             }}
-//           ></div>
-//         </div>
-//         <div className="slider--next" onClick={() => handleSliderClick(true)}>
-// <div
-//   style={{
-//     width: "15px", // Defina a largura da div conforme necessário
-//     height: "15px", // Defina a altura da div conforme necessário
-//     backgroundImage: `url("${next}")`, // Use a variável seta para a imagem de fundo
-//     backgroundSize: "contain", // Ajuste o tamanho da imagem de acordo com suas necessidades
-//     backgroundRepeat: "no-repeat",
-//   }}
-// ></div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-// export default Works;
 import React, { useState, useEffect } from "react";
-import victory from "../img/work-victory.jpg";
-import nowak from "../img/work-alex-nowak.jpg";
-import metiew from "../img/work-metiew-smith.jpg";
+import victory from "../img/tech.png";
+import nowak from "../img/consultoria.png";
+import metiew from "../img/treinamento.png";
 import prev from "../components/icons/prev.svg";
 import next from "../components/icons/next.svg";
 const Works = ({ isDisabled }) => {
   const works = [
     {
       image: victory,
-      title: "Victory",
+      title: "Desenvolvimento de Software",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.",
+        "Desenvolvemos soluções de software personalizadas para atender às suas necessidades específicas, garantindo eficiência e qualidade.",
     },
     {
       image: nowak,
-      title: "Metiew & Smith",
+      title: "Consultoria",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.",
+        "Oferecemos consultoria especializada em tecnologia para ajudar sua empresa a tomar decisões informadas e estratégicas sobre suas necessidades de TI.",
     },
     {
       image: metiew,
-      title: "Alex Nowak",
+      title: "Treinamento",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.",
+        "Fornecemos treinamento abrangente para capacitar sua equipe a utilizar eficazmente as soluções tecnológicas implementadas, maximizando o retorno do investimento.",
     },
   ];
 
@@ -156,7 +54,7 @@ const Works = ({ isDisabled }) => {
 
   return (
     <div className="work">
-      <h2>Selected work</h2>
+      {/* <h2>Serviço</h2> */}
       <div className="work--lockup">
         <ul className="slider">
           {works.map((work, index) => (
@@ -179,7 +77,12 @@ const Works = ({ isDisabled }) => {
                   <img src={work.image} alt={work.title} />
                 </div>
                 <p className="slider--item-title">{work.title}</p>
-                <p className="slider--item-description">{work.description}</p>
+                <p
+                  className="slider--item-description"
+                  style={{ fontSize: "12px" }}
+                >
+                  {work.description}
+                </p>
               </a>
             </li>
           ))}

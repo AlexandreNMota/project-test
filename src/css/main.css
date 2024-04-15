@@ -498,7 +498,7 @@ body {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: #0f33ff;
+  background-color: #d19402;
   border: none;
   opacity: 0;
   visibility: hidden;
@@ -1322,7 +1322,7 @@ input[type="checkbox"]:checked + label div {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  background-color: #0f33ff;
+  background-color: #d19402;
   border: none;
   border-radius: 0;
 }
@@ -1396,8 +1396,8 @@ input[type="checkbox"]:checked + label div {
   display: none;
 }
 .work-request--options input[type="checkbox"]:checked + label {
-  background-color: #0f33ff;
-  border-color: #0f33ff;
+  background-color: #d19402;
+  border-color: #d19402;
 }
 .work-request--options input[type="checkbox"]:checked + label svg {
   width: 15px;
@@ -1605,7 +1605,7 @@ input[type="checkbox"]:checked + label div {
   width: 110%;
   height: 15px;
   opacity: 0;
-  background-color: #0f33ff;
+  background-color: #d19402;
 }
 .outer-nav > li.is-active::before {
   opacity: 1;

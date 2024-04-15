@@ -2,7 +2,7 @@ import check from "../components/icons/check.svg";
 const HireUs = ({ isDisabled }) => {
   return (
     <div className="hire">
-      <h2>You want us to do</h2>
+      <h2>O que você deseja?</h2>
       <form className="work-request">
         <div className="work-request--options">
           <span className="options-a">
@@ -168,7 +168,7 @@ const HireUs = ({ isDisabled }) => {
               spellcheck="false"
               disabled={isDisabled}
             />
-            <label for="name">Name</label>
+            <label for="name">Nome</label>
           </div>
           <div className="information-email">
             <input
@@ -180,7 +180,11 @@ const HireUs = ({ isDisabled }) => {
             <label for="email">Email</label>
           </div>
         </div>
-        <input type="submit" value="Send Request" disabled={isDisabled} />
+        <input
+          type="submit"
+          value="Solicitar orçamento"
+          disabled={isDisabled}
+        />
       </form>
     </div>
   );

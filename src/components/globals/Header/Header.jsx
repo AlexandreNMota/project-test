@@ -24,21 +24,27 @@ const Header = ({
     setNextPos(4);
   };
 
-  const goHome = (e) =>{
+  const goHome = (e) => {
     e.preventDefault();
     setNextPos(0);
-  }
+  };
   return (
     <header className="header">
-      <a className="header--logo" href="#0" onClick={(e)=>{goHome(e)}}>
-        <img src={logo} alt="Global" />        
+      <a
+        className="header--logo"
+        href="#0"
+        onClick={(e) => {
+          goHome(e);
+        }}
+      >
+        <img src={logo} alt="Global" />
       </a>
       <button
         className="header--cta cta"
         onClick={hireUs}
         disabled={isDisabled}
       >
-        Hire Us
+        Solicite um orçamento
       </button>
       <button
         className="header--nav-toggle"
